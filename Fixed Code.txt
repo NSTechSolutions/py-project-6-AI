@@ -1,0 +1,107 @@
+Python split list into two lists based on condition
+
+test_list = [1, 4, 5, 6, "x", 5, 6, 5, 4]
+ 
+print("The original list : " + str(test_list))
+ 
+particular_value = "x" # if this value is true then 
+result = []
+temp_list = []
+for i in test_list:
+    if i == particular_value:
+        temp_list.append(i)
+        result.append(temp_list)
+        temp_list = []
+    else:
+        temp_list.append(i)
+result.append(temp_list)
+print("The list after splitting by a value : " + str(result))
+print("Spreading Values",*result)
+
+Link for more info
+https://www.geeksforgeeks.org/python-split-list-into-lists-by-particular-value/
+
+N.B
+- I fix the symbom filtering as well a distructer the values per array to reperent Number 1, Symbol and Number2
+
+Fixes
+
+- Previous code
+ # # I want to creat a python program that filter your qestion and gives you a resinable answer
+
+
+print("--------------------------")
+userInput = input("Enter a  calculation\n");
+
+
+calculation = []; # This will contain the raw calculation
+mathemetical_signs = ['+','-','*','/',]
+
+# This will filter the Numeric and the mathemetical signs
+for i in userInput:
+    # new_value = int(i)
+    if (i.isnumeric()):
+        #   print("--------------------------")
+        print(i,"is a number");
+        
+        calculation.append(int(i));
+
+    elif (i in mathemetical_signs):
+         #Converting the x in to computer multiplication sign
+        if(i == "x"): # Needs to be able to identify values for mathematical symbols whether you are using computer math or general math
+            i = "*"
+            calculation.append(i)
+    
+        # calculation.append(i)
+         
+
+    else:
+        # This will catch anything which is not numeric or not used data
+        print("--------------------------")
+        print("is a not number")
+
+
+# print(calculation);
+# print("--------------------------")
+# print(userInput)
+# # for(i=0;i<userInpu;i++):
+# # print(type(userInput))
+# # for i in userInput:
+# #     new_value = int(i)
+# #     if isinstance(new_value, (int, float, complex)): 
+# #         print("--------------------------")
+# #         print("Its a Number")
+# #         print(int(i));
+# # else:
+# #         print("--------------------------")
+# #         print("Else Result")
+# #         print(userInput);
+
+
+
+
+# test_list = [1, 4, 5, 6, "x", 5, 6, 5, 4]
+ 
+print("The original list : " + str(calculation))
+ 
+particular_value = "*" # Need to add more symboys for validation else it will skip filtering with a paticular value
+result = []
+temp_list = []
+sign = []
+for i in calculation:
+    if i == particular_value:
+        sign.append(i)
+        result.append(temp_list)
+        temp_list = []
+
+    else:
+        temp_list.append(i)
+result.append(temp_list)
+print("The list after splitting by a value : " + str(result))
+print("Spreading Values",*result)
+
+# value_1 = result[0];
+# value_2 = result[1];
+# print("Value 1",*value_1)
+# print("Value 2",*value_2)
+# print("The Calculation result", *value_1  *value_2 )

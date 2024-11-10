@@ -1,0 +1,24 @@
+Python split list into two lists based on condition
+
+test_list = [1, 4, 5, 6, "x", 5, 6, 5, 4]
+ 
+print("The original list : " + str(test_list))
+ 
+particular_value = "x" # if this value is true then 
+
+
+N.B 
+ - To be completed
+    - How to save distructed (with a spred operator) in to variables 
+ - Fixed
+
+    - I want to creat a python program that filter your qestion and gives you a resinable answer
+    - I fix the symbom filtering as well a distructer the values per array to reperent Number 1, Symbol and Number2
+
+Solution 2
+   - The shows you how to handly getting more that one perameter for destructing a list
+   -https://stackoverflow.com/questions/12838549/how-can-i-concatenate-two-integers-in-python
+
+Solution 3
+   - Google search for getting an unknown number of arguments
+   - how to handle getting an unknown number of  arguments in python

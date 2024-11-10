@@ -1,0 +1,234 @@
+# # I want to creat a python program that filter your qestion and gives you a resinable answer
+
+
+print("--------------------------")
+userInput = input("Enter a  calculation\n");
+
+
+calculation = []; # This will contain the raw calculation
+mathemetical_signs = ['+','-','*','/','x']
+
+# This will filter the Numeric and the mathemetical signs
+for i in userInput:
+    # new_value = int(i)
+    if (i.isnumeric()):
+        #   print("--------------------------")
+        print(i,"is a number");
+        
+        calculation.append(int(i));
+
+    elif (i in mathemetical_signs):
+         #Converting the x in to computer multiplication sign
+        if(i == "x"): # Needs to be able to identify values for mathematical symbols whether you are using computer math or general math
+            i = "*"
+            calculation.append(i)
+    
+        else: 
+            calculation.append(i)
+         
+
+    else:
+        # This will catch anything which is not numeric or not used data
+        print("--------------------------")
+        print("is a not number")
+
+
+
+ 
+print("The original list : " + str(calculation))
+ 
+ # Need to add more symboys for validation else it will skip filtering with a paticular value
+result = []
+temp_list = []
+sign = []
+for i in calculation:
+    if i in mathemetical_signs:
+        sign.append(i)
+        result.append(temp_list)
+        temp_list = []
+
+    else:
+        temp_list.append(i)
+result.append(temp_list)
+print("The list after splitting by a value : " + str(result))
+print("Spreading Values",*result)
+
+value_1 = result[0];
+value_2 = result[1];
+
+print(type(value_1[0]));
+
+print("Value 1 ->",*value_1)
+print("Value 2 ->",*value_2)
+print( value_1[0] +  value_2[0] )
+
+# value_1 = *value_1;
+
+def calculate(sum_1,sum_2):
+    if(sign[0] == '+'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 + sum_2);
+    elif(sign[0] == '-'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 - sum_2);
+    elif(sign[0] == '*'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 * sum_2);
+    elif(sign[0] == '/'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 / sum_2);
+    else:
+        print("There was an issue ", sign);
+
+calculate(*value_1,*value_2);
+
+# Old Code
+# print(calculation);
+# print("--------------------------")
+# print(userInput)
+# # for(i=0;i<userInpu;i++):
+# # print(type(userInput))
+# # for i in userInput:
+# #     new_value = int(i)
+# #     if isinstance(new_value, (int, float, complex)): 
+# #         print("--------------------------")
+# #         print("Its a Number")
+# #         print(int(i));
+# # else:
+# #         print("--------------------------")
+# #         print("Else Result")
+# #         print(userInput);
+
+
+
+
+# test_list = [1, 4, 5, 6, "x", 5, 6, 5, 4]
+
+------------------------------------------------ Back Up 2 --------------------------------------------------->
+# # I want to creat a python program that filter your qestion and gives you a resinable answer
+import math
+
+print("--------------------------")
+userInput = input("Enter a  calculation\n");
+
+
+calculation = []; # This will contain the raw calculation
+mathemetical_signs = ['+','-','*','/','x']
+
+# This will filter the Numeric and the mathemetical signs
+for i in userInput:
+    # new_value = int(i)
+    if (i.isnumeric()):
+        #   print("--------------------------")
+        print(i,"is a number");
+        
+        calculation.append(int(i));
+
+    elif (i in mathemetical_signs):
+         #Converting the x in to computer multiplication sign
+        if(i == "x"): # Needs to be able to identify values for mathematical symbols whether you are using computer math or general math
+            i = "*"
+            calculation.append(i)
+    
+        else: 
+            calculation.append(i)
+         
+
+    else:
+        # This will catch anything which is not numeric or not used data
+        print("--------------------------")
+        print("is a not number")
+
+
+
+ 
+print("The original list : " + str(calculation))
+ 
+ # Need to add more symboys for validation else it will skip filtering with a paticular value
+result = []
+temp_list = []
+sign = []
+for i in calculation:
+    if i in mathemetical_signs:
+        sign.append(i)
+        result.append(temp_list)
+        temp_list = []
+
+    else:
+        temp_list.append(i)
+result.append(temp_list)
+print("The list after splitting by a value : " + str(result))
+print("Spreading Values",*result)
+
+value_1 = result[0];
+value_2 = result[1];
+
+# print(type(value_1[0]));
+
+# print("Value 1 ->",*value_1)
+# print("Value 2 ->",*value_2)
+# print( value_1[0] +  value_2[0] )
+
+# value_1 = *value_1;
+# testin_value = None;
+# def number_1(num1_a):
+#     for i in num1_a:
+        
+
+# value_1 = number_1(result[0])
+
+# print(value_1,"This is the result of function number one")
+
+# def number1(*num1):
+#     testing_num = 0
+#     for num in num1:
+#         testing_num = testing_num + num
+
+#     return testing_num
+# value = number1(*value_1)
+
+# print(value, "Checking for the function value")
+
+# Allows for 2 values to be passed in the 
+# def f(x, y):
+#     if y != 0:
+#         a = math.floor(math.log10(y))
+#     else:
+#         a = -1
+
+#     return int(x*10**(1+a)+y)
+# num_1 = f(*value_1)
+# num_2 = f(*value_2)
+
+def calculate(sum_1,sum_2):
+    if(sign[0] == '+'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 + sum_2);
+    elif(sign[0] == '-'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 - sum_2);
+    elif(sign[0] == '*'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 * sum_2);
+    elif(sign[0] == '/'):
+        print("Result of ",sum_1, sign[0], sum_2, "is ", sum_1 / sum_2);
+    else:
+        print("There was an issue ", sign);
+
+calculate(*value_1,*value_2); # Need to add try block for when you divide by zero 
+# calculate(num_1,*num_2);
+
+# Old Code
+# print(calculation);
+# print("--------------------------")
+# print(userInput)
+# # for(i=0;i<userInpu;i++):
+# # print(type(userInput))
+# # for i in userInput:
+# #     new_value = int(i)
+# #     if isinstance(new_value, (int, float, complex)): 
+# #         print("--------------------------")
+# #         print("Its a Number")
+# #         print(int(i));
+# # else:
+# #         print("--------------------------")
+# #         print("Else Result")
+# #         print(userInput);
+
+
+
+
+# test_list = [1, 4, 5, 6, "x", 5, 6, 5, 4]
